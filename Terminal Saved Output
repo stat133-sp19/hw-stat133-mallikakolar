@@ -1,0 +1,1382 @@
+Last login: Wed Mar 13 01:41:02 on ttys000
+Mallikas-MacBook-Pro:~ mallikakolar$ ls
+171 section 6.R			abalone.data
+Applications			andre-iguodala-summary.txt
+Desktop				draymond-green-summary.txt
+Documents			kevin-durant-summary.txt
+Downloads			nba2018-salary-points.RData
+Library				shots-data-summary.txt
+Movies				shots-data.csv
+Music				stat133-lab05
+Pictures			stephen-curry-summary.txt
+Public				tristan-thompson-summary.txt
+Untitled.Rmd
+Mallikas-MacBook-Pro:~ mallikakolar$ cd Desktop
+Mallikas-MacBook-Pro:Desktop mallikakolar$ cd hw-stat133
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ ls
+workout01
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git init
+Initialized empty Git repository in /Users/mallikakolar/Desktop/hw-stat133/.git/
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git remote add origin https://github.com/stat133-sp19/hw-stat133-mallikakolar
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git pull origin master
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 12 (delta 1), reused 5 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+From https://github.com/stat133-sp19/hw-stat133-mallikakolar
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/code/make-shot-charts-script.R
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/code/make-shot-charts-script.R
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/code/make-shots-data-script.R
+	workout01/data/
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "first r script file"
+[master 094ae3d] first r script file
+ 1 file changed, 52 insertions(+)
+ create mode 100644 workout01/code/make-shot-charts-script.R
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.16 KiB | 1.16 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   1df1126..094ae3d  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/code/make-shots-data-script.R
+	workout01/data/
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/code/make-shots-data-script.R
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/code/make-shots-data-script.R
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "second r script file"
+[master 4073d12] second r script file
+ 1 file changed, 65 insertions(+)
+ create mode 100644 workout01/code/make-shots-data-script.R
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.25 KiB | 1.25 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   094ae3d..4073d12  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/data/andre-iguodala.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/data/andre-iguodala.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/draymond-green.csv
+	workout01/data/kevin-durant.csv
+	workout01/data/klay-thompson.csv
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "andre inguodala data"
+[master 80bd744] andre inguodala data
+ 1 file changed, 372 insertions(+)
+ create mode 100644 workout01/data/andre-iguodala.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 5.79 KiB | 5.79 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   4073d12..80bd744  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/draymond-green.csv
+	workout01/data/kevin-durant.csv
+	workout01/data/klay-thompson.csv
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/data/draymond-green.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/data/draymond-green.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/kevin-durant.csv
+	workout01/data/klay-thompson.csv
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "draymond green data"
+[master 92deb4a] draymond green data
+ 1 file changed, 579 insertions(+)
+ create mode 100644 workout01/data/draymond-green.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 8.38 KiB | 4.19 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   80bd744..92deb4a  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/kevin-durant.csv
+	workout01/data/klay-thompson.csv
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/data/kevin-durant.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/data/kevin-durant.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/klay-thompson.csv
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "kevin durant data"
+[master 9c04b16] kevin durant data
+ 1 file changed, 916 insertions(+)
+ create mode 100644 workout01/data/kevin-durant.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 12.91 KiB | 3.23 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   92deb4a..9c04b16  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/klay-thompson.csv
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/data/klay-thompson.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/data/klay-thompson.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "klay thompson data"
+[master 96ecdbc] klay thompson data
+ 1 file changed, 1221 insertions(+)
+ create mode 100644 workout01/data/klay-thompson.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 16.98 KiB | 5.66 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   9c04b16..96ecdbc  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/shots-data.csv
+	workout01/data/stephen-curry.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/data/stephen-curry.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/data/stephen-curry.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/shots-data.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "stephen curry data"
+[master aba9bfb] stephen curry data
+ 1 file changed, 1251 insertions(+)
+ create mode 100644 workout01/data/stephen-curry.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 17.30 KiB | 5.77 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   96ecdbc..aba9bfb  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/data/shots-data.csv
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/data/shots-data.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/data/shots-data.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "shots data combined"
+[master 4760229] shots data combined
+ 1 file changed, 4335 insertions(+)
+ create mode 100644 workout01/data/shots-data.csv
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 65.27 KiB | 4.66 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   aba9bfb..4760229  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status workout01/data/data-dictionary.md
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/data/data-dictionary.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "data dictionary md file"
+On branch master
+Untracked files:
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Everything up-to-date
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/andre-iguodala-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/andre-iguodala-shot-chart.pdf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/draymond-green-shot-chart.pdf
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/kevin-durant-shot-chart.pdf
+	workout01/images/klay-thompson-shot-chart.pdf
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "iguodala shot chart"
+[master 99828a8] iguodala shot chart
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/andre-iguodala-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 177.28 KiB | 22.16 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   4760229..99828a8  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/draymond-green-shot-chart.pdf
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/kevin-durant-shot-chart.pdf
+	workout01/images/klay-thompson-shot-chart.pdf
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/draymond-green-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/draymond-green-shot-chart.pdf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/kevin-durant-shot-chart.pdf
+	workout01/images/klay-thompson-shot-chart.pdf
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "green shot chart"
+[master 02b0934] green shot chart
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/draymond-green-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 178.51 KiB | 22.31 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   99828a8..02b0934  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/kevin-durant-shot-chart.pdf
+	workout01/images/klay-thompson-shot-chart.pdf
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/kevin-durant-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/kevin-durant-shot-chart.pdf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/klay-thompson-shot-chart.pdf
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "durant shot chart"
+[master 273ee82] durant shot chart
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/kevin-durant-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 180.48 KiB | 22.56 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   02b0934..273ee82  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/klay-thompson-shot-chart.pdf
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/klay-thompson-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/klay-thompson-shot-chart.pdf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "thompson shot chart"
+[master 3d1c5d0] thompson shot chart
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/klay-thompson-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 182.72 KiB | 20.30 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   273ee82..3d1c5d0  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/nba-court.jpg
+	workout01/images/stephen-curry-shot-chart.pdf
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/stephen-curry-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/stephen-curry-shot-chart.pdf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/nba-court.jpg
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "curry shot chart"
+[master 0c4374f] curry shot chart
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/stephen-curry-shot-chart.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 182.75 KiB | 18.27 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   3d1c5d0..0c4374f  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/images/nba-court.jpg
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/nba-court.jpg
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/nba-court.jpg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "nba court picture"
+[master cd66147] nba court picture
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/nba-court.jpg
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 440.26 KiB | 12.23 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   0c4374f..cd66147  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.pdf
+	workout01/images/gsw-shot-charts.png
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/gsw-shot-charts.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/gsw-shot-charts.pdf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.png
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "shot charts combined pdf"
+[master d1b406f] shot charts combined pdf
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/gsw-shot-charts.pdf
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 883.21 KiB | 22.65 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   cd66147..d1b406f  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/images/gsw-shot-charts.png
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/images/gsw-shot-charts.png
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/images/gsw-shot-charts.png
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "shot charts combined png"
+[master 13d8349] shot charts combined png
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 workout01/images/gsw-shot-charts.png
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 929.87 KiB | 23.25 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   d1b406f..13d8349  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/output/andre-iguodala-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/output/andre-iguodala-summary.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/draymond-green-summary.txt
+	workout01/output/kevin-durant-summary.txt
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/output/tristan-thompson-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "iguodala summary text file"
+[master 5248076] iguodala summary text file
+ 1 file changed, 21 insertions(+)
+ create mode 100644 workout01/output/andre-iguodala-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 847 bytes | 847.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   13d8349..5248076  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/draymond-green-summary.txt
+	workout01/output/kevin-durant-summary.txt
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/output/tristan-thompson-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/output/draymond-green-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/output/draymond-green-summary.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/kevin-durant-summary.txt
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/output/tristan-thompson-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "green summary text file"
+[master 1ed7d83] green summary text file
+ 1 file changed, 21 insertions(+)
+ create mode 100644 workout01/output/draymond-green-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 881 bytes | 881.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   5248076..1ed7d83  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/kevin-durant-summary.txt
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/output/tristan-thompson-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/output/kevin-durant-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/output/kevin-durant-summary.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/output/tristan-thompson-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "durant summary text file"
+[master 46748fa] durant summary text file
+ 1 file changed, 21 insertions(+)
+ create mode 100644 workout01/output/kevin-durant-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 855 bytes | 855.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   1ed7d83..46748fa  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/output/tristan-thompson-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/output/klay-thompson-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/output/klay-thompson-summary.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "thompson summary text file"
+[master 1177440] thompson summary text file
+ 1 file changed, 21 insertions(+)
+ create mode 100644 workout01/output/klay-thompson-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 869 bytes | 869.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   46748fa..1177440  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/output/stephen-curry-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/output/stephen-curry-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/output/stephen-curry-summary.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "curry summary text file"
+[master 5af5049] curry summary text file
+ 1 file changed, 21 insertions(+)
+ create mode 100644 workout01/output/stephen-curry-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 862 bytes | 862.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   1177440..5af5049  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ gits add workout01/output/shots-data-summary.txt
+-bash: gits: command not found
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/output/shots-data-summary.txt
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/output/shots-data-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/output/shots-data-summary.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/report/
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "shots combined summary text file"
+[master 42e198a] shots combined summary text file
+ 1 file changed, 21 insertions(+)
+ create mode 100644 workout01/output/shots-data-summary.txt
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 869 bytes | 869.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   5af5049..42e198a  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/report/
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/report/workout01-Mallika-Kolar.Rmd
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/report/workout01-Mallika-Kolar.Rmd
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/report/.DS_Store
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "report on data"
+[master a8a9648] report on data
+ 1 file changed, 117 insertions(+)
+ create mode 100644 workout01/report/workout01-Mallika-Kolar.Rmd
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.68 KiB | 2.68 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   42e198a..a8a9648  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Output
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/data/data-dictionary.md
+	workout01/output/.DS_Store
+	workout01/report/.DS_Store
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git workout01/data/data-dictionary.md
+git: 'workout01/data/data-dictionary.md' is not a git command. See 'git --help'.
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/data/data-dictionary.md
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/data/data-dictionary.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Output
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/output/.DS_Store
+	workout01/report/.DS_Store
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "variable explanations"
+[master 85bee6b] variable explanations
+ 1 file changed, 22 insertions(+)
+ create mode 100644 workout01/data/data-dictionary.md
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 971 bytes | 971.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   a8a9648..85bee6b  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Output
+	workout01/.DS_Store
+	workout01/README.md
+	workout01/data/.DS_Store
+	workout01/output/.DS_Store
+	workout01/report/.DS_Store
+	workout01/warmup1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git add workout01/README.md
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   workout01/README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Output
+	workout01/.DS_Store
+	workout01/data/.DS_Store
+	workout01/output/.DS_Store
+	workout01/report/.DS_Store
+	workout01/warmup1/
+
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git commit -m "workout01 readme file"
+[master 8d64fc9] workout01 readme file
+ 1 file changed, 4 insertions(+)
+ create mode 100644 workout01/README.md
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 508 bytes | 508.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/stat133-sp19/hw-stat133-mallikakolar
+   85bee6b..8d64fc9  master -> master
+Mallikas-MacBook-Pro:hw-stat133 mallikakolar$ 

@@ -1,0 +1,38 @@
+---
+title: "practice workout3"
+author: "Mallika Kolar"
+date: "4/28/2019"
+output: html_document
+---
+
+```{r}
+check_success <- function(success, trials){
+  if (sum(success >=0) == length(success)){
+    if (length(success) < trials) {
+      return(TRUE)
+    } else {
+      stop('success cannot be greater than trials')
+    }
+  } else{
+    stop('invalid success value')
+  }
+}
+
+check_success(c(0,-2,4,5), 2)
+
+
+check_success <- function(success, trials){
+  if (sum(success >=0) == length(success)){
+    if (length(success) < trials) {
+      return(TRUE)
+    } else {
+      stop('success cannot be greater than trials')
+    }
+  } else{
+    stop('invalid success value')
+  }
+}
+
+
+```
+

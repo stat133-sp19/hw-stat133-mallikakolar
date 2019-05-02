@@ -1,0 +1,1 @@
+{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"check_success(c(0, -2, 4, 5), 2)","line_number":0},{"character_number":5,"end_character_number":33,"end_line_number":9,"file":"","func":"stop(\"invalid success value\")","line_number":9}],"message":"Error in check_success(c(0, -2, 4, 5), 2) : invalid success value\n"}

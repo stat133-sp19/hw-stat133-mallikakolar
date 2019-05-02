@@ -1,0 +1,117 @@
+---
+title: "workout1-Mallika-Kolar"
+author: "Mallika Kolar"
+output: github_document
+---
+
+```{r include = FALSE}
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(jpeg)
+library(grid)
+
+Iguodala <- read_csv("/Users/mallikakolar/Desktop/hw-stat133/workout01/data/andre-iguodala.csv")
+Green <- read_csv("/Users/mallikakolar/Desktop/hw-stat133/workout01/data/draymond-green.csv")
+Durant <- read_csv("/Users/mallikakolar/Desktop/hw-stat133/workout01/data/kevin-durant.csv")
+Thompson <- read_csv("/Users/mallikakolar/Desktop/hw-stat133/workout01/data/klay-thompson.csv")
+Curry <- read_csv("/Users/mallikakolar/Desktop/hw-stat133/workout01/data/stephen-curry.csv")
+court_file <- "/Users/mallikakolar/Desktop/hw-stat133/workout01/images/nba-court.jpg"
+court_image <- rasterGrob( readJPEG(court_file), width = unit(1, "npc"), height = unit(1, "npc"))
+
+# add a column 'name' to each imported data frame
+Iguodala$name <- c(rep("Iguodala", nrow(Iguodala)))
+Green$name <- c(rep("Green", nrow(Green)))
+Durant$name <- c(rep("Durant", nrow(Durant)))
+Thompson$name <- c(rep("Thompson", nrow(Thompson)))
+Curry$name <- c(rep("Curry", nrow(Curry)))
+
+# change y and n to shot_yes and shot_no
+Iguodala$shot_made_flag[Iguodala$shot_made_flag == "n"] <- "shot_no"
+Iguodala$shot_made_flag[Iguodala$shot_made_flag == "y"] <- "shot_yes"
+Green$shot_made_flag[Green$shot_made_flag == "n"] <- "shot_no"
+Green$shot_made_flag[Green$shot_made_flag == "y"] <- "shot_yes"
+Durant$shot_made_flag[Durant$shot_made_flag == "n"] <- "shot_no"
+Durant$shot_made_flag[Durant$shot_made_flag == "y"] <- "shot_yes"
+Thompson$shot_made_flag[Thompson$shot_made_flag == "n"] <- "shot_no"
+Thompson$shot_made_flag[Thompson$shot_made_flag == "y"] <- "shot_yes"
+Curry$shot_made_flag[Curry$shot_made_flag == "n"] <- "shot_no"
+Curry$shot_made_flag[Curry$shot_made_flag == "y"] <- "shot_yes"
+
+df_all <- rbind(Iguodala, Green, Durant, Thompson, Curry)
+shot_info <- select(df_all, name, shot_type, shot_made_flag)
+
+total_2 <- shot_info %>% filter(shot_type == "2PT Field Goal") %>% group_by(name) %>% summarise("total_pts_2" = sum(shot_made_flag == "shot_no" | shot_made_flag == "shot_yes"))
+made_2 <- shot_info %>% filter(shot_type == "2PT Field Goal") %>% group_by(name) %>% summarise("made_pts_2" = sum(shot_made_flag == "shot_yes"))
+pt2 <- full_join(total_2, made_2, by = "name") 
+pt2 <- mutate(pt2, perc_made_2 = (made_pts_2/total_pts_2)*100) %>% arrange(desc(perc_made_2))
+
+total_3 <- shot_info %>% filter(shot_type == "3PT Field Goal") %>% group_by(name) %>% summarise("total_pts_3" = sum(shot_made_flag == "shot_no" | shot_made_flag == "shot_yes"))
+made_3 <- shot_info %>% filter(shot_type == "3PT Field Goal") %>% group_by(name) %>% summarise("made_pts_3" = sum(shot_made_flag == "shot_yes"))
+pt3 <- full_join(total_3, made_3, by = "name") 
+pt3 <- mutate(pt3, perc_made_3 = (made_pts_3/total_pts_3)*100) %>% arrange(desc(perc_made_3))
+
+total_shooting <- shot_info %>% group_by(name) %>% summarise("total_shots" = sum(shot_made_flag == "shot_no" | shot_made_flag == "shot_yes"))
+made_shooting <- shot_info %>% group_by(name) %>% summarise("made_shots" = sum(shot_made_flag == "shot_yes"))
+pts <- full_join(total_shooting, made_shooting, by = "name") 
+pts <- mutate(pts, perc_made = (made_shots/total_shots)*100) %>% arrange(desc(perc_made))
+```
+
+
+# The Fab 5 of the Golden State Warriors
+
+In the last few years, the Golden State Warriors have proven themselves to be a force in the NBA. A new dynasty has formed under the leadership of Steve Kerr, leading the Warriors to win three Championships in the last four years. Steve Kerr has brought together a talented team led by the Fab 5: Stephen Curry, Draymond Green, Kevin Durant, Andre Iguodala, and Klay Thompson.   
+  
+These players are superb shooters and have great overall statistics. Curry, especially, is a fantastic shooter, both in the paint and around the three-point range. In 2016, Curry made about 53% of his 2-point shots and approximately 41% of his 3-point shots.  In three pointers, Curry only stands behind Tristan Thompson, who has the highest percentage of 3-point shots made— about 42%.   
+  
+Curry isn’t the only member of the Fab 5 that can shoot. Both Andre Iguodala and Kevin Durant made approximately 63% and 60%, respectively, of their 2-point field goal attempts. 
+
+*Below is a summary of 2-point shot statistics for the Fab 5.*
+
+| Name    | Shots Taken | Shots Made | Percentage |
+|---------|-------------|------------|------------|
+|Thompson | 580         | 246        | 42.4%      |
+|Curry    | 687         | 280        | 40.7%      |
+|Durant   | 272         | 105        | 38.6%      |
+|Iguodala | 161         | 58         | 36.0%      |
+|Green    | 232         | 74         | 31.8%      |
+
+Overall, these five players together have amazing statistics. They make their baskets. 
+
+
+## What else makes the Golden State Warriors such a good team
+
+The Warriors have the Fab 5. Not many NBA teams have a full starting lineup that is as talented and reliable as the Fab 5. All of the players make a good percentage of their shots. However, the players are also talented enough to score from a variety of positions on the court. Curry has the widest range. 
+
+```{r echo=FALSE}
+Curry_shot_chart <- ggplot(data = Curry) + annotation_custom(court_image, -250, 250, -50, 420) + 
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) + ylim(-50, 420) +
+  ggtitle('Shot Chart: Stephen Curry (2016 season)') + theme_minimal()
+Curry_shot_chart
+```
+
+He is not only able to make shot after shot from the 3-point line, but he is also constantly near the basket, shooting jump shots and layups. Looking at his shot chart, he moves all over the court to make baskets. 
+
+This is the same for the rest of the Fab 5. 
+
+```{r echo=FALSE}
+Shot_chart <- ggplot(data = df_all) + annotation_custom(court_image, -250, 250, -50, 420) + 
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) + ylim(-50, 420) + 
+  ggtitle('Shot Charts: GSW (2016 season)') + theme_minimal() + facet_wrap(~name)
+Shot_chart
+```
+
+The shot charts for Thompson and Durant are similar to Curry's chart All three players are able to make shots from all over the court. Iguodala also plays an important role. As a larger and stronger player, he is able to get rebounds and make shots near the basket. 
+
+
+Now with three championships under their belt, the Golden State Warriors must be feeling pressure to do well in upcoming seasons. However, as long as the Fab 5 are still here and play as we have seen in the past, the Warriors have a good chance to be in the finals again next year. 
+
+
+***
+
+*References*
+
+<https://www.nba.com/article/2017/12/14/one-team-one-stat-warriors-shooting-better-ever>
+<https://shottracker.com/articles/are-the-warriors-making-the-mid-range-relevant-again>
+
+
