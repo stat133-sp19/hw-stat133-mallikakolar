@@ -1,4 +1,0 @@
-"0","check_success(c(0,-2,4,5), 2)
-"
-"2","Error in check_success(c(0, -2, 4, 5), 2) : invalid success value
-"
